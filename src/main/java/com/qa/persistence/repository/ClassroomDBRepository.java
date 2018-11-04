@@ -73,7 +73,7 @@ public class ClassroomDBRepository implements ClassroomRepository {
 		if (classroomInDB != null) {
 			manager.remove(classroomInDB);
 		}
-		return "{\"message\": \"classroom sucessfully deleted.\"}";
+		return "{\"message\": \"classroom sucessfully deleted\"}";
 	}
 
 	@Transactional(REQUIRED)
@@ -82,7 +82,7 @@ public class ClassroomDBRepository implements ClassroomRepository {
 		if (traineeInDB != null) {
 			manager.remove(traineeInDB);
 		}
-		return "{\"message\": \"Trainee sucessfully deleted.\"}";
+		return "{\"message\": \"Trainee sucessfully deleted\"}";
 	}
 
 	private Trainees findTrainee(Long traineeID) {
