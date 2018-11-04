@@ -3,6 +3,7 @@ package com.qa.persistence.domain;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,22 +15,25 @@ import javax.persistence.OneToMany;
 @Entity
 public class Classrooms {
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
+	
+	@Column(name = "classroomID")
 	private Long classroomID;
+	
 	private String trainer;
 
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
-	@JoinColumn(name = "Classroom_id")
-	private List<Trainees> traineesList;
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL,orphanRemoval = true)
+	@JoinColumn(name = "classroomID", referencedColumnName = "classroomID")
+	private List<Trainees> traineeList;
 
 	public Classrooms() {
 
 	}
 
-	public Classrooms(String trainer, List<Trainees> traineesList) {
+	public Classrooms(String trainer, List<Trainees> traineeList) {
 		this.trainer = trainer;
-		this.traineesList = traineesList;
+		this.traineeList = traineeList;
 	}
 
 	public String getTrainer() {
@@ -49,11 +53,11 @@ public class Classrooms {
 	}
 
 	public List<Trainees> getTrainees() {
-		return traineesList;
+		return traineeList;
 	}
 
-	public void setTrainees(List<Trainees> traineesList) {
-		this.traineesList = traineesList;
+	public void setTrainees(List<Trainees> Trainees) {
+		this.traineeList = Trainees;
 	}
 
 }
