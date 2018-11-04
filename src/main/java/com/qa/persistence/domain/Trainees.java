@@ -17,7 +17,7 @@ public class Trainees {
 	private String traineeName;
 
 	@Column(name = "classroomID")
-	private Long classroomID1;
+	private Long classroomID;
 
 	public Trainees(String traineeName) {
 		this.traineeName = traineeName;
@@ -44,11 +44,11 @@ public class Trainees {
 	}
 
 	public Long getClassroomID1() {
-		return classroomID1;
+		return classroomID;
 	}
 
 	public void setClassroomID1(Long classroomID1) {
-		this.classroomID1 = classroomID1;
+		this.classroomID = classroomID1;
 	}
 
 	@Override
