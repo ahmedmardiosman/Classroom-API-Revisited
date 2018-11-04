@@ -11,10 +11,12 @@ public class Trainees {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private Long traineeID;
 
 	@Column(name = "Classroom_id")
-	private Long classroomId;
+	private Long classroomID;
+	
+	private Long traineeID;
+	
 
 	private String traineeName;
 

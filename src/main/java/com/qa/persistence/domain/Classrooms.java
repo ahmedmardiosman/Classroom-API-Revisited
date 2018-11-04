@@ -20,7 +20,7 @@ public class Classrooms {
 	private String trainer;
 
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
-	@JoinColumn(name = "Classroom_id")
+	@JoinColumn(name = "Classroom_id", referencedColumnName = "Classroom_id")
 	private List<Trainees> traineesList;
 
 	public Classrooms() {
