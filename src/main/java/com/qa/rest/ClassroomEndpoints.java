@@ -17,7 +17,7 @@ public class ClassroomEndpoints {
 	@Inject
 	private ClassroomService service;
 
-	@Path("/getAllClassrooms")
+	@Path("/getClassrooms")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllClassrooms() {
