@@ -42,8 +42,8 @@ public class ClassroomDBRepository implements ClassroomRepository {
 	}
 
 	@Transactional(REQUIRED)
-	public String createClassroom(String classroom) {
-		Classrooms aClassroom = jsonConverter.getObjectForJSON(classroom, Classrooms.class);
+	public String createClassroom(String trainer) {
+		Classrooms aClassroom = jsonConverter.getObjectForJSON(trainer, Classrooms.class);
 		manager.persist(aClassroom);
 		return "{\"message\": \"classroom has been sucessfully added\"}";
 	}

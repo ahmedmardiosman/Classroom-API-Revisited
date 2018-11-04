@@ -8,12 +8,12 @@ public interface ClassroomRepository {
 
 	String updateClassroom(String classroom);
 
-	String createClassroom(String classroom);
+	String createClassroom(String trainer);
 
 	String createTrainee(String trainee);
 
-	String deleteClassroom(Long ClassroomID);
+	String deleteClassroom(Long classroomID);
 
-	String deleteTrainee(Long ClassroomID);
+	String deleteTrainee(Long traineeID);
 
 }

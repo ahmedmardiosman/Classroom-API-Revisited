@@ -34,8 +34,8 @@ public class ClassroomEndpoints {
 	@Path("/createClassroom")
 	@POST
 	@Produces({ "application/json" })
-	public String createClassroom(String classroom) {
-		return service.createClassroom(classroom);
+	public String createClassroom(String trainer) {
+		return service.createClassroom(trainer);
 	}
 
 	@Path("/createTrainee")
@@ -48,15 +48,15 @@ public class ClassroomEndpoints {
 	@Path("/deleteClassroom/{id}")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteAccount(@PathParam("id") Long id) {
-		return service.deleteTrainee(id);
+	public String deleteAccount(@PathParam("id") Long classroomID) {
+		return service.deleteClassroom(classroomID);
 	}
 
 	@Path("/deleteTrainee/{id}")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteTrainee(@PathParam("id") Long id) {
-		return service.deleteTrainee(id);
+	public String deleteTrainee(@PathParam("id") Long traineeID) {
+		return service.deleteTrainee(traineeID);
 	}
 
 	@Path("/updateClassroom")
