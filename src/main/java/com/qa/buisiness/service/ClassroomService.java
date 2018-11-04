@@ -8,7 +8,7 @@ public interface ClassroomService {
 
 	String updateClassroom(String classroom);
 
-	String createClassroom(String classroom);
+	String createClassroom(String trainer);
 	
 	String createTrainee(String trainee);
 

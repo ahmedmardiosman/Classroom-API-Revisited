@@ -18,8 +18,8 @@ public class ClassroomServiceImpl implements ClassroomService {
 
 	}
 
-	public String createClassroom(String classroom) {
-		return repo.createClassroom(classroom);
+	public String createClassroom(String trainer) {
+		return repo.createClassroom(trainer);
 	}
 
 	public String createTrainee(String trainee) {

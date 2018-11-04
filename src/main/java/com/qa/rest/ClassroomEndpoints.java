@@ -17,7 +17,7 @@ public class ClassroomEndpoints {
 	@Inject
 	private ClassroomService service;
 
-	@Path("/getAllClassrooms")
+	@Path("/getClassrooms")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllClassrooms() {
@@ -34,8 +34,8 @@ public class ClassroomEndpoints {
 	@Path("/createClassroom")
 	@POST
 	@Produces({ "application/json" })
-	public String createClassroom(String classroom) {
-		return service.createClassroom(classroom);
+	public String createClassroom(String trainer) {
+		return service.createClassroom(trainer);
 	}
 
 	@Path("/createTrainee")
@@ -59,10 +59,10 @@ public class ClassroomEndpoints {
 		return service.deleteTrainee(traineeID);
 	}
 
-	@Path("/updateClassroom")
+	@Path("/updateClassroom/{id}")
 	@PUT
 	@Produces({ "application/json" })
-	public String updateClassroom(String classroom) {
+	public String updateClassroom(@PathParam("id")Long classroomID,String classroom) {
 		return service.updateClassroom(classroom);
 	}
 
