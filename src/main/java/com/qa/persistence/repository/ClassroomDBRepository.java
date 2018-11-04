@@ -45,14 +45,14 @@ public class ClassroomDBRepository implements ClassroomRepository {
 	public String createClassroom(String classroom) {
 		Classrooms aClassroom = jsonConverter.getObjectForJSON(classroom, Classrooms.class);
 		manager.persist(aClassroom);
-		return "{\"message\": \"classroom has been sucessfully added\"}";
+		return "{\"message\": \"classroom has been sucessfully added.\"}";
 	}
 
 	@Transactional(REQUIRED)
 	public String createTrainee(String trainee) {
 		Trainees aTrainee = jsonConverter.getObjectForJSON(trainee, Trainees.class);
 		manager.persist(aTrainee);
-		return "{\"message\": \"classroom has been sucessfully added\"}";
+		return "{\"message\": \"Trainee has been sucessfully added.\"}";
 	}
 
 	@Transactional(REQUIRED)
@@ -63,7 +63,7 @@ public class ClassroomDBRepository implements ClassroomRepository {
 			classroomInDB.setTrainer(aClassroom.getTrainer());
 			classroomInDB.setTrainees(aClassroom.getTrainees());
 		}
-		return "{\"message\": \"classroom has been sucessfully updated\"}";
+		return "{\"message\": \"classroom has been sucessfully updated.\"}";
 	}
 
 	@Transactional(REQUIRED)
@@ -72,7 +72,7 @@ public class ClassroomDBRepository implements ClassroomRepository {
 		if (classroomInDB != null) {
 			manager.remove(classroomInDB);
 		}
-		return "{\"message\": \"classroom sucessfully deleted\"}";
+		return "{\"message\": \"classroom sucessfully deleted.\"}";
 	}
 
 	@Transactional(REQUIRED)
@@ -81,7 +81,7 @@ public class ClassroomDBRepository implements ClassroomRepository {
 		if (traineeInDB != null) {
 			manager.remove(traineeInDB);
 		}
-		return "{\"message\": \"Trainee sucessfully deleted\"}";
+		return "{\"message\": \"Trainee sucessfully deleted.\"}";
 	}
 
 	private Trainees findTrainee(Long ClassroomID) {
