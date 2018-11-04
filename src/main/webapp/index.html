@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<title>QA Flight Booking System</title>
+<h1> QA Flight Booking System </h1>
+
+
+<body style="background-color:powderblue;">   Welcome to QA Flight Booking System <p>
+Here you can search for the cheapest flights available </p>
+<p> Now you can Register for an account. </p>
+</body>
+
+
+
+
+ 
+
+<form>
+ First name:<br>
+ <input type="text" firstName="firstname" placeholder = "First name">
+ <br>
+ <br>
+ Last name:<br>
+ <input type="text" secondName="lastname" placeholder = "Second name">
+ <br>
+ <br>
+ Email Adress:<br>
+ <input type="text" eAdress="Email Adress" placeholder = "Email Adress" >
+ <br>
+ <br>
+
+ <script type="text/javascript">
+function registered() {
+   alert("Welcome to Qa Flight Bookings \nYou are now registered.")
+ alert("Thank you")}
+</script>
+
+
+ <button type="Submit" onclick="registered()" value="Registration"> Register Now </button>
+ <br>
+</form> 
+
+
+
+<script >
+function httpGet(theURL)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theURL , false ); // false for synchronous request
+    xmlHttp.send( null );
+    
+document.getElementById("Output").innerHTML = xmlHttp.response;
+
+}
+</script>
+
+
+
+<body>
+  <br>
+ Get all movies please for us
+  <button type="Get URL" onclick="httpGet('http://localhost:8080/Movie/api/movie/getAllMovies')" value="GetURL"> Get URL </button>
+ <p id="Output"> </p>
+
+</body>
+
+
+<footer>
+ <p id="Output"> CEO : Ahmed Osman</p>
+ <p>Contact information:<a href="ahmedosman@supermail.com">
+ ahmedosman@supermail.com</a>.</p>
+</footer>     
+
+
+
+
+
+</html>
