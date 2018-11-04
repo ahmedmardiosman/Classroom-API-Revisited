@@ -52,7 +52,7 @@ public class ClassroomDBRepository implements ClassroomRepository {
 	public String createTrainee(String trainee) {
 		Trainees aTrainee = jsonConverter.getObjectForJSON(trainee, Trainees.class);
 		manager.persist(aTrainee);
-		return "{\"message\": \"classroom has been sucessfully added\"}";
+		return "{\"message\": \"Trainee has been sucessfully added\"}";
 	}
 
 	@Transactional(REQUIRED)
