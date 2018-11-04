@@ -17,13 +17,13 @@ public class Classrooms {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	
+
 	@Column(name = "classroomID")
 	private Long classroomID;
-	
+
 	private String trainer;
 
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL,orphanRemoval = true)
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "classroomID", referencedColumnName = "classroomID")
 	private List<Trainees> traineeList;
 
