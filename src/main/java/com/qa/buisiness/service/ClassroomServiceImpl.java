@@ -38,7 +38,7 @@ public class ClassroomServiceImpl implements ClassroomService {
 
 	public String deleteTrainee(Long traineeID) {
 
-		return repo.deleteClassroom(traineeID);
+		return repo.deleteTrainee(traineeID);
 	}
 
 	public void setRepo(ClassroomRepository repo) {

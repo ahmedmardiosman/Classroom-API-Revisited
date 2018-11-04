@@ -1,6 +1,7 @@
 package com.qa.persistence.repository;
 
-import static javax.transaction.Transactional.TxType.*;
+import static javax.transaction.Transactional.TxType.REQUIRED;
+import static javax.transaction.Transactional.TxType.SUPPORTS;
 
 import java.util.Collection;
 
@@ -84,12 +85,12 @@ public class ClassroomDBRepository implements ClassroomRepository {
 		return "{\"message\": \"Trainee sucessfully deleted.\"}";
 	}
 
-	private Trainees findTrainee(Long ClassroomID) {
-		return manager.find(Trainees.class, ClassroomID);
+	private Trainees findTrainee(Long traineeID) {
+		return manager.find(Trainees.class, traineeID);
 	}
 
-	private Classrooms findClassroom(Long ClassroomID) {
-		return manager.find(Classrooms.class, ClassroomID);
+	private Classrooms findClassroom(Long classroomID) {
+		return manager.find(Classrooms.class, classroomID);
 	}
 
 	public void setManager(EntityManager manager) {
