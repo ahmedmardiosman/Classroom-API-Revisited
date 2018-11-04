@@ -6,7 +6,7 @@ public interface ClassroomRepository {
 
 	String getAllTrainees();
 
-	String updateClassroom(String classroom);
+	String updateClassroom(Long classroomID, String classroom);
 
 	String createClassroom(String trainer);
 

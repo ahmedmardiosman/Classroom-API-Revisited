@@ -57,9 +57,9 @@ public class ClassroomDBRepository implements ClassroomRepository {
 	}
 
 	@Transactional(REQUIRED)
-	public String updateClassroom(String classroom) {
+	public String updateClassroom(Long classroomID, String classroom) {
 		Classrooms aClassroom = jsonConverter.getObjectForJSON(classroom, Classrooms.class);
-		Classrooms classroomInDB = findClassroom(aClassroom.getClassroomID());
+		Classrooms classroomInDB = findClassroom(classroomID);
 		if (classroomInDB != null) {
 			classroomInDB.setTrainer(aClassroom.getTrainer());
 			classroomInDB.setTrainees(aClassroom.getTrainees());
