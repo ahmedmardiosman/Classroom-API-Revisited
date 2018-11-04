@@ -31,14 +31,14 @@ public class ClassroomServiceImpl implements ClassroomService {
 		return repo.updateClassroom(classroom);
 	}
 
-	public String deleteClassroom(Long id) {
+	public String deleteClassroom(Long classroomID) {
 
-		return repo.deleteClassroom(id);
+		return repo.deleteClassroom(classroomID);
 	}
 
-	public String deleteTrainee(Long id) {
+	public String deleteTrainee(Long classroomID) {
 
-		return repo.deleteClassroom(id);
+		return repo.deleteClassroom(classroomID);
 	}
 
 	public void setRepo(ClassroomRepository repo) {
