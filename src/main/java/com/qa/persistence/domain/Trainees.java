@@ -9,29 +9,21 @@ import javax.persistence.Id;
 @Entity
 public class Trainees {
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 
-	@Column(name = "Classroom_id")
-	private Long classroomID;
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long traineeID;
-	
 
 	private String traineeName;
+
+	@Column(name = "classroomID")
+	private Long classroomID1;
 
 	public Trainees(String traineeName) {
 		this.traineeName = traineeName;
 	}
 
 	public Trainees() {
-
-	}
-
-	public Trainees(Long traineeID, String traineeName) {
-
-		this.setTraineeID(traineeID);
-		this.setTraineeName(traineeName);
 
 	}
 
@@ -49,6 +41,14 @@ public class Trainees {
 
 	public void setTraineeName(String traineeName) {
 		this.traineeName = traineeName;
+	}
+
+	public Long getClassroomID1() {
+		return classroomID1;
+	}
+
+	public void setClassroomID1(Long classroomID1) {
+		this.classroomID1 = classroomID1;
 	}
 
 	@Override
