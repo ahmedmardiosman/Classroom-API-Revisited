@@ -55,8 +55,8 @@ public class ClassroomEndpoints {
 	@Path("/deleteTrainee/{id}")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteTrainee(@PathParam("id") Long id) {
-		return service.deleteTrainee(id);
+	public String deleteTrainee(@PathParam("id") Long traineeID) {
+		return service.deleteTrainee(traineeID);
 	}
 
 	@Path("/updateClassroom")
