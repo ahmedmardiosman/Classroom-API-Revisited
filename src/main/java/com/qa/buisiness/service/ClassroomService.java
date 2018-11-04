@@ -14,5 +14,5 @@ public interface ClassroomService {
 
 	String deleteClassroom(Long classroomID);
 	
-	String deleteTrainee(Long classroomID);
+	String deleteTrainee(Long traineeID);
 }

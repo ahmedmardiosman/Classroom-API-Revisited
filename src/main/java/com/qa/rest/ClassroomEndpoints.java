@@ -49,14 +49,14 @@ public class ClassroomEndpoints {
 	@DELETE
 	@Produces({ "application/json" })
 	public String deleteAccount(@PathParam("id") Long classroomID) {
-		return service.deleteTrainee(classroomID);
+		return service.deleteClassroom(classroomID);
 	}
 
 	@Path("/deleteTrainee/{id}")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteTrainee(@PathParam("id") Long id) {
-		return service.deleteTrainee(id);
+	public String deleteTrainee(@PathParam("id") Long traineeID) {
+		return service.deleteTrainee(traineeID);
 	}
 
 	@Path("/updateClassroom")
