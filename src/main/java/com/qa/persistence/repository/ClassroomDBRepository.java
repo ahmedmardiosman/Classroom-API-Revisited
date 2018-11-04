@@ -67,8 +67,8 @@ public class ClassroomDBRepository implements ClassroomRepository {
 	}
 
 	@Transactional(REQUIRED)
-	public String deleteClassroom(Long ClassroomID) {
-		Trainees classroomInDB = findTrainee(ClassroomID);
+	public String deleteClassroom(Long classroomID) {
+		Classrooms classroomInDB = findClassroom(classroomID);
 		if (classroomInDB != null) {
 			manager.remove(classroomInDB);
 		}
@@ -76,8 +76,8 @@ public class ClassroomDBRepository implements ClassroomRepository {
 	}
 
 	@Transactional(REQUIRED)
-	public String deleteTrainee(Long ClassroomID) {
-		Trainees traineeInDB = findTrainee(ClassroomID);
+	public String deleteTrainee(Long classroomID) {
+		Trainees traineeInDB = findTrainee(classroomID);
 		if (traineeInDB != null) {
 			manager.remove(traineeInDB);
 		}

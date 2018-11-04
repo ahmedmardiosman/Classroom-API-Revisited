@@ -31,9 +31,8 @@ public class Classrooms {
 
 	}
 
-	public Classrooms(String trainer, List<Trainees> traineeList) {
+	public Classrooms(String trainer) {
 		this.trainer = trainer;
-		this.traineeList = traineeList;
 	}
 
 	public String getTrainer() {

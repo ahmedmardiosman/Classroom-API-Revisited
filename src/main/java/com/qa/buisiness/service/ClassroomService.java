@@ -12,7 +12,7 @@ public interface ClassroomService {
 	
 	String createTrainee(String trainee);
 
-	String deleteClassroom(Long ClassroomID);
+	String deleteClassroom(Long classroomID);
 	
-	String deleteTrainee(Long ClassroomID);
+	String deleteTrainee(Long classroomID);
 }
